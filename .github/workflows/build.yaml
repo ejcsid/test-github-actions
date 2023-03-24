@@ -18,5 +18,5 @@ jobs:
           cache: maven
     
       - name: Build with Maven
-        run: mvn -B -Pgitlab-cicd verify -Dmaven.main.skip --file pom.xml
+        run: mvn -B -s ./m2/settings.xml -Pgitlab-cicd verify -Dmaven.main.skip --file pom.xml
 
