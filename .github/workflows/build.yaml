@@ -3,7 +3,7 @@ name: build and test
 on: [push]
 
 jobs:
-  compliance:
+  build-test:
     runs-on: ubuntu-latest
 
     steps:
@@ -20,6 +20,9 @@ jobs:
       - name: Build with Maven
         run: mvn -B -s ./.m2/settings.xml -Pgitlab-cicd verify -Dspring.security.logging.requests=all --file pom.xml
 
+  compliance:
+    runs-on: ubuntu-latest
+    steps:
       - name: Advance Security Policy as Code
         uses: advanced-security/policy-as-code@v2.3.6
         with:
