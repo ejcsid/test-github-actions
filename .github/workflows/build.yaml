@@ -24,7 +24,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Advance Security Policy as Code
-        uses: ejcsid/policy-as-code@0.0.1
+        uses: ejcsid/policy-as-code@v0.0.1
         with:
           policy: ejcsid/test-github-actions
           policy-path: policies/default.yaml
